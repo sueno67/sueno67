@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artículos - El poder del sueño</title>
+  <link rel="stylesheet" href="estilos.css">
+
+  <style>
+    /* TARJETAS */
+    .contenedor-articulos {
+      width: 90%;
+      margin: 20px auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    article {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+      border-left: 8px solid #4a90e2; /* azul original */
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    article:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    article h2 {
+      color: #4a90e2; /* azul original */
+      margin-bottom: 10px;
+    }
+
+    /* TABLA */
+    table {
+      width: 60%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th {
+      background: #964387; /* morado original */
+      color: white;
+      padding: 12px;
+    }
+    td {
+      padding: 10px;
+      background: #f9f9f9;
+    }
+    tr:nth-child(even) td {
+      background: #e9d7e8; /* morado clarito */
+    }
+
+    /* VISOR PDF */
+    .pdf-contenedor {
+      width: 90%;
+      margin: 40px auto;
+      text-align: center;
+    }
+    .pdf-contenedor iframe {
+      width: 100%;
+      height: 650px;
+      border-radius: 8px;
+      border: 2px solid #4a90e2;
+    }
+    .boton-descarga {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 18px;
+      background: #964387;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .boton-descarga:hover {
+      background: #6a2f5f;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Artículos</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="acerca.html">Acerca de</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="contenedor-articulos">
+    <article>
+      <h2>🧠 Beneficios del sueño adecuado</h2>
+      <p>Dormir bien mejora la memoria, el sistema inmune y reduce el estrés.</p>
+    </article>
+
+    <article>
+      <h2>🌙 Consejos para dormir mejor</h2>
+      <ul>
+        <li>Establece un horario regular.</li>
+        <li>Evita pantallas antes de dormir.</li>
+        <li>Mantén tu habitación fresca y oscura.</li>
+      </ul>
+    </article>
+  </div>
+
+  <h3 style="text-align:center; margin-top:40px;">⏱️ Horas de sueño recomendadas</h3>
+  <table>
+    <tr><th>Edad</th><th>Horas por noche</th></tr>
+    <tr><td>Adolescentes</td><td>8–10</td></tr>
+    <tr><td>Adultos</td><td>7–9</td></tr>
+  </table>
+
+  <div class="pdf-contenedor">
+      <h2>📘 Conclusión sobre el uso responsable de servicios digitales</h2>
+      <iframe src="CONCLUSION.pdf"></iframe>
+      <a href="CONCLUSION.pdf" download class="boton-descarga">📥 Descargar PDF</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 El poder del sueño</p>
+</footer>
+</body>
+</html>

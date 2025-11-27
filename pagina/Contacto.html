@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - El poder del sueño</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+  <h1>Contacto</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="articulos.html">Artículos</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="acerca.html">Acerca de</a>
+  </nav>
+</header>
+
+<main>
+  <form id="contactoForm">
+    <label>Nombre:<br>
+      <input type="text" name="nombre" required>
+    </label><br><br>
+
+    <label>Correo:<br>
+      <input type="email" name="correo" required>
+    </label><br><br>
+
+    <label>Mensaje:<br>
+      <textarea name="mensaje" required style="width:100%; height:100px;"></textarea>
+    </label><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <p>Correo de contacto: 
+    <a href="mailto:info@elpoderdelsueno.com">info@elpoderdelsueno.com</a>
+  </p>
+</main>
+
+<footer>
+  <p>&copy; 2025 El poder del sueño</p>
+</footer>
+
+<script>
+document.getElementById('contactoForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('¡Gracias por tu mensaje! Nos pondremos en contacto pronto.');
+});
+</script>
+
+</body>
+</html>
