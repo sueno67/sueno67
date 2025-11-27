@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos - El poder del sueño</title>
+  <link rel="stylesheet" href="estilos.css">
+
+  <style>
+    /* ▬▬▬▬▬ DISEÑO DEL MENÚ ▬▬▬▬▬ */
+    header {
+      background: #4a90e2;
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: #0cf1d2;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.2s, text-shadow 0.2s;
+    }
+    nav a:hover {
+      text-shadow: 0px 0px 8px #0cf1d2;
+      transform: scale(1.06);
+    }
+
+    /* ▬▬▬▬▬ DISEÑO DE IMÁGENES + DESCARGA ▬▬▬▬▬ */
+    .recurso-img {
+      width: 90%;
+      max-width: 900px;
+      display: block;
+      margin: 30px auto;
+      border-radius: 12px;
+      border: 4px solid #4a90e2;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .boton-descarga {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 18px;
+      background: #964387;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0px 3px 8px rgba(0,0,0,0.4);
+      transition: transform 0.2s, background 0.2s;
+    }
+    .boton-descarga:hover {
+      background: #6a2f5f;
+      transform: scale(1.05);
+    }
+
+    /* ▬▬▬▬▬ DISEÑO DEL FOOTER ▬▬▬▬▬ */
+    footer {
+      background: #964387;
+      color: #e3dfdf;
+      text-align: center;
+      padding: 12px;
+      margin-top: 30px;
+      box-shadow: 0px -4px 12px rgba(0,0,0,0.4);
+      border-top: 4px solid #4a90e2;
+    }
+  </style>
+
+</head>
+<body>
+
+<header>
+  <h1>Recursos</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="articulos.html">Artículos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="acerca.html">Acerca de</a>
+  </nav>
+</header>
+
+<main>
+
+  <p>Enlaces externos de interés:</p>
+  <ul>
+    <li><a href="https://www.who.int/" target="_blank">Organización Mundial de la Salud</a></li>
+    <li><a href="https://www.sleepfoundation.org/" target="_blank">Sleep Foundation</a></li>
+  </ul>
+
+  <p>Video informativo:</p>
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/4RtIY3Db1Xg"
+    title="Consejos para dormir mejor"
+    frameborder="0" allowfullscreen></iframe>
+
+  <!-- ▬▬▬▬▬ 1ERA IMAGEN ▬▬▬▬▬ -->
+  <h2 style="text-align:center; margin-top:40px;">📊 Cronología de uso digital</h2>
+  <img class="recurso-img" src="tu-imagen.jpg" alt="Cronología digital 1">
+  <div style="text-align:center;">
+    <a href="tu-imagen.jpg" download class="boton-descarga">📥 Descargar imagen</a>
+  </div>
+
+  <!-- ▬▬▬▬▬ 2DA IMAGEN ▬▬▬▬▬ -->
+  <h2 style="text-align:center; margin-top:60px;">📌 Mi huella digital</h2>
+  <img class="recurso-img" src="tu-imagen-2.jpg" alt="Cronología digital 2">
+  <div style="text-align:center;">
+    <a href="tu-imagen-2.jpg" download class="boton-descarga">📥 Descargar imagen</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 El poder del sueño</p>
+</footer>
+
+</body>
+</html>
