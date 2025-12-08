@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artículos - El poder del sueño</title>
+  <link rel="stylesheet" href="estilos.css">
+
+  <style>
+
+    /* --------- CONTENEDOR GENERAL --------- */
+    body {
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* --------- GRID DE ARTÍCULOS --------- */
+    .contenedor-articulos {
+      width: 92%;
+      margin: 30px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    article {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.18);
+      border-left: 10px solid #4a90e2;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    article:hover {
+      transform: translateY(-7px);
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    article h2 {
+      color: #4a90e2;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    article p, article ul {
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    ul li {
+      margin-bottom: 5px;
+    }
+
+    /* --------- TABLA --------- */
+    table {
+      width: 70%;
+      margin: 45px auto;
+      border-collapse: collapse;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    th {
+      background: linear-gradient(90deg, #4a90e2, #0078ff);
+      color: white;
+      padding: 14px;
+      font-size: 1.1rem;
+    }
+
+    td {
+      padding: 13px;
+      background: #fafafa;
+    }
+
+    tr:nth-child(even) td {
+      background: #ead7ec;
+    }
+
+    /* ----------- PDF ----------- */
+    .pdf-contenedor {
+      width: 90%;
+      margin: 45px auto;
+      text-align: center;
+      animation: fadeUp 0.7s ease;
+    }
+
+    .pdf-contenedor iframe {
+      width: 100%;
+      height: 750px;
+      border-radius: 10px;
+      border: 3px solid #4a90e2;
+      box-shadow: 0px 6px 18px rgba(0,0,0,0.25);
+    }
+
+    .boton-descarga {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 14px 20px;
+      background: #964387;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .boton-descarga:hover {
+      background: #702f63;
+      transform: scale(1.07);
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Artículos</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="acerca.html">Acerca de</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ARTÍCULOS ESTILO PRO -->
+  <div class="contenedor-articulos">
+
+    <article>
+      <h2>🧠 Beneficios del sueño adecuado</h2>
+      <p>Dormir bien es esencial para que el cerebro procese información, repare tejidos, fortalezca conexiones
+      neuronales y regule emociones. Un sueño profundo y continuo ayuda a prevenir trastornos de ansiedad,
+      fortalece la memoria y mejora la creatividad.</p>
+
+      <ul>
+        <li>Mejor rendimiento académico</li>
+        <li>Reducción del estrés y la irritabilidad</li>
+        <li>Mayor energía durante el día</li>
+        <li>Mejor capacidad para resolver problemas</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>🌙 Consejos para dormir mejor</h2>
+      <p>La higiene del sueño es clave para mejorar tu calidad de vida. Implementar hábitos saludables permite que tu
+      cuerpo entienda cuándo es momento de descansar y recuperar energía.</p>
+
+      <ul>
+        <li>Evitar pantallas 1 hora antes de dormir</li>
+        <li>Usar música relajante</li>
+        <li>Evitar bebidas energéticas</li>
+        <li>Leer antes de dormir</li>
+        <li>Desconectarse de redes sociales por la noche</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>📱 Tecnodependencia y el sueño</h2>
+      <p>El uso excesivo del celular afecta la producción de melatonina y altera los ciclos naturales del sueño. La
+      exposición prolongada a la luz azul puede provocar insomnio, cansancio y falta de atención durante el día.</p>
+
+      <ul>
+        <li>Mayor probabilidad de insomnio</li>
+        <li>Desregulación del ciclo sueño–vigilia</li>
+        <li>Mayor irritabilidad</li>
+        <li>Dificultad para concentrarse</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>😴 Consecuencias de la falta de sueño</h2>
+      <p>No dormir lo necesario puede alterar tanto el estado físico como el emocional. Además de reducir la
+      energía, afecta la memoria, los reflejos y la capacidad para tomar decisiones.</p>
+
+      <ul>
+        <li>Problemas de aprendizaje</li>
+        <li>Aumento del riesgo de enfermedades</li>
+        <li>Dificultad para regular emociones</li>
+        <li>Cansancio extremo y problemas de concentración</li>
+      </ul>
+    </article>
+
+  </div>
+
+  <!-- TABLA DE HORAS -->
+  <h3 style="text-align:center; margin-top:40px; font-size:1.5rem;">⏱️ Horas de sueño recomendadas</h3>
+
+  <table>
+    <tr><th>Edad</th><th>Horas por noche</th></tr>
+    <tr><td>Niños (6–12 años)</td><td>9–12</td></tr>
+    <tr><td>Adolescentes</td><td>8–10</td></tr>
+    <tr><td>Adultos jóvenes</td><td>7–9</td></tr>
+    <tr><td>Adultos mayores</td><td>7–8</td></tr>
+  </table>
+
+  <!-- PDF -->
+  <div class="pdf-contenedor">
+      <h2>📘 Conclusión sobre el uso responsable de servicios digitales</h2>
+      <iframe src="CONCLUSION.pdf"></iframe>
+      <a href="CONCLUSION.pdf" download class="boton-descarga">📥 Descargar PDF</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 El poder del sueño</p>
+</footer>
+
+</body>
+</html>

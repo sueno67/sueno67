@@ -1,0 +1,212 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Fondo general */
+body {
+  background: #d0cccc;
+  color: #000;
+}
+
+/* ──────────────── HEADER ──────────────── */
+header {
+  text-align: center;
+  padding: 25px 10px 15px;
+  background: linear-gradient(90deg, #001833, #003c82);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+  border-bottom: 5px solid #964387;
+}
+
+header h1 {
+  font-size: 2.3rem;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* NAV */
+nav {
+  margin-top: 12px;
+}
+
+nav a {
+  margin: 0 16px;
+  color: #6ee7c8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  padding: 5px 8px;
+}
+
+nav a:hover {
+  color: white;
+  text-shadow: 0 0 8px #6ee7c8;
+  transform: scale(1.1);
+}
+
+/* Logo opcional */
+.logo {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 105px;
+  z-index: 2000;
+  filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.4));
+  transition: 0.3s ease;
+}
+
+/* ──────────────── SECCIONES GENERALES ──────────────── */
+main {
+  padding: 20px;
+}
+
+section, .caja, .contenedor {
+  margin: 30px auto;
+  max-width: 850px;
+  padding: 22px 30px;
+  background: #ffffffdb;
+  border-left: 6px solid #002958;
+  border-radius: 14px;
+  box-shadow: 0px 5px 12px rgba(0,0,0,0.25);
+  animation: aparecer 0.9s ease-out;
+}
+
+h2 {
+  color: #003c82;
+  margin-bottom: 10px;
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+}
+
+h3 {
+  color: #4a90e2;
+  margin-top: 15px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+ul li:hover {
+  transform: translateX(5px);
+  color: #003c82;
+}
+
+/* ──────────────── FORMULARIO (CONTACTO) ──────────────── */
+form {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #ffffffee;
+  border-left: 6px solid #002958;
+  border-radius: 14px;
+  box-shadow: 0px 5px 12px rgba(0,0,0,0.25);
+  animation: aparecer 1s ease-out;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #4a90e2;
+  border-radius: 10px;
+  outline: none;
+  margin-top: 5px;
+  transition: 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #002958;
+  box-shadow: 0px 0px 10px rgba(0,46,101,0.5);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #964387;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-top: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #6a2f5f;
+  transform: scale(1.05);
+}
+
+/* ──────────────── IMÁGENES DE RECURSOS ──────────────── */
+.recurso-img {
+  width: 90%;
+  max-width: 900px;
+  display: block;
+  margin: 30px auto;
+  border-radius: 12px;
+  border: 4px solid #4a90e2;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+}
+
+.recurso-img:hover {
+  transform: scale(1.03);
+}
+
+.boton-descarga {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 18px;
+  background: #964387;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+}
+
+.boton-descarga:hover {
+  background: #6a2f5f;
+  transform: scale(1.05);
+}
+
+/* ──────────────── PDF (Acerca) ──────────────── */
+.pdf-contenedor {
+  text-align: center;
+  margin: 30px auto;
+  max-width: 900px;
+  animation: aparecer 1s ease-out;
+}
+
+.pdf-contenedor iframe {
+  width: 100%;
+  height: 650px;
+  border: 3px solid #4a90e2;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.35);
+}
+
+/* ──────────────── FOOTER ──────────────── */
+footer {
+  background: #001833;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  border-top: 4px solid #964387;
+  margin-top: 40px;
+}
+
+/* ──────────────── ANIMACIONES ──────────────── */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}

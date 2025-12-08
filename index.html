@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El poder del sueño</title>
+
+  <style>
+    /* RESET SUAVE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 25px 10px 15px;
+      background: linear-gradient(90deg, #001833, #003c82);
+      color: white;
+      position: relative;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+      border-bottom: 5px solid #964387;
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      letter-spacing: 1px;
+      text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+      animation: aparecer 1s ease-out;
+    }
+
+    /* Navegación moderna */
+    nav {
+      margin-top: 12px;
+    }
+
+    nav a {
+      margin: 0 16px;
+      color: #6ee7c8;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+      padding: 5px 8px;
+    }
+
+    nav a:hover {
+      color: white;
+      text-shadow: 0 0 8px #6ee7c8;
+      transform: scale(1.1);
+    }
+
+    /* Logo */
+    .logo {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      width: 105px;
+      z-index: 2000;
+      filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.4));
+      transition: 0.3s ease;
+    }
+    .logo:hover {
+      transform: scale(1.08) rotate(2deg);
+    }
+
+    /* Banner */
+    .banner {
+      text-align: center;
+      background: linear-gradient(180deg, #001833, #0073ff);
+      padding: 45px 10px;
+      color: white;
+      border-bottom: 5px solid #964387;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    .banner h2 {
+      font-size: 1.9rem;
+      animation: deslizar 1.3s ease-out;
+    }
+
+    .banner p {
+      margin-top: 6px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .banner-img {
+      width: 270px;
+      margin-top: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .banner-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+    }
+
+    /* Secciones */
+    section {
+      margin: 30px auto;
+      max-width: 800px;
+      padding: 22px 30px;
+      background: #ffffffdb;
+      border-left: 6px solid #002958;
+      border-radius: 14px;
+      box-shadow: 0px 5px 12px rgba(0,0,0,0.25);
+      animation: aparecer 1s ease-out;
+    }
+
+    h2 {
+      color: #003c82;
+      margin-bottom: 10px;
+      text-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    h3 {
+      margin-top: 15px;
+      color: #4a90e2;
+    }
+
+    ul {
+      margin-top: 5px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.5rem;
+      padding-left: 5px;
+      transition: 0.3s ease;
+    }
+
+    ul li:hover {
+      transform: translateX(5px);
+      color: #003c82;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 18px;
+      background: #001833;
+      color: white;
+      font-size: 0.9rem;
+      border-top: 4px solid #964387;
+    }
+
+    /* Animaciones */
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes deslizar {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>El poder del sueño</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="articulos.html">Artículos</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="acerca.html">Acerca de</a>
+  </nav>
+
+  <img src="logo.jpg" alt="" class="logo">
+</header>
+
+<div class="banner">
+  <h2>PARA PODER RENDIR, PRIMERO TIENES QUE DORMIR</h2>
+  <p>Conoce la importancia del sueño y aprende a cuidarlo</p>
+
+  <img src="https://images.reporteindigo.com/wp-content/uploads/2022/10/importancia-sueno-salud.jpg" 
+       alt="Dormir bien" 
+       class="banner-img">
+</div>
+
+<main>
+
+  <section id="importancia-suenio">
+    <h2>¿Por qué es importante dormir?</h2>
+    <p>Dormir es una necesidad fundamental para la salud física, mental y emocional. Durante el sueño, el cuerpo se recupera y el cerebro procesa información importante.</p>
+
+    <h3>Beneficios del sueño</h3>
+    <ul>
+      <li><strong>Recuperación física:</strong> fortalece el sistema inmunológico y regenera el cuerpo.</li>
+      <li><strong>Memoria y aprendizaje:</strong> mejora la concentración y el rendimiento escolar.</li>
+      <li><strong>Bienestar emocional:</strong> reduce estrés y mejora el estado de ánimo.</li>
+      <li><strong>Regulación hormonal:</strong> controla el apetito y el metabolismo.</li>
+    </ul>
+
+    <h3>Consecuencias de dormir mal</h3>
+    <ul>
+      <li>Cansancio y falta de energía</li>
+      <li>Dificultad para concentrarse</li>
+      <li>Ansiedad, irritabilidad y estrés</li>
+      <li>Mayor riesgo de enfermedades</li>
+    </ul>
+
+    <h3>Consejos para dormir mejor</h3>
+    <ul>
+      <li>Mantén un horario fijo</li>
+      <li>Evita pantallas antes de dormir</li>
+      <li>Duerme en un lugar oscuro y silencioso</li>
+      <li>No comas pesado antes de dormir</li>
+      <li>Haz ejercicio durante el día</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 El poder del sueño | Autor: Equipo de Animación Digital</p>
+</footer>
+
+</body>
+</html>

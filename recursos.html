@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos - El poder del sueño</title>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* ▬▬ HEADER ▬▬ */
+    header {
+      text-align: center;
+      padding: 20px 10px;
+      background: linear-gradient(90deg, #001833, #003c82);
+      color: white;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+      border-bottom: 5px solid #964387;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+      animation: aparecer 1s ease-out;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 14px;
+      color: #6ee7c8;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+      padding: 5px 8px;
+    }
+
+    nav a:hover {
+      color: white;
+      text-shadow: 0 0 8px #6ee7c8;
+      transform: scale(1.1);
+    }
+
+    /* ▬▬ SECCIÓN PRINCIPAL ▬▬ */
+    main {
+      margin: 30px auto;
+      max-width: 900px;
+      padding: 20px;
+      animation: aparecer 1s ease-out;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003c82;
+      margin: 35px 0 10px;
+      text-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      line-height: 1.6rem;
+    }
+
+    /* LISTA DE ENLACES */
+    ul {
+      margin: 8px 0 20px 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+      transition: 0.3s ease;
+    }
+    ul li:hover {
+      transform: translateX(5px);
+    }
+    ul li a {
+      color: #003c82;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+    ul li a:hover {
+      color: #6a2f5f;
+      text-shadow: 0 0 5px #964387;
+    }
+
+    /* VIDEO - contenedor responsivo */
+    .video-contenedor {
+      width: 100%;
+      max-width: 900px;
+      margin: 20px auto;
+      text-align: center;
+      animation: aparecer 0.9s ease-out;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      border: 3px solid #4a90e2;
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ▬▬ IMÁGENES ▬▬ */
+    .recurso-img {
+      width: 90%;
+      max-width: 850px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 15px;
+      border-left: 6px solid #002958;
+      border-right: 6px solid #964387;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.35);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .recurso-img:hover {
+      transform: scale(1.04);
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.45);
+    }
+
+    .boton-descarga {
+      display: inline-block;
+      padding: 12px 18px;
+      background: #964387;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-weight: bold;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+      transition: 0.3s ease;
+    }
+
+    .boton-descarga:hover {
+      background: #6a2f5f;
+      transform: scale(1.08);
+    }
+
+    .centro {
+      text-align: center;
+    }
+
+    /* ▬▬ FOOTER ▬▬ */
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 16px;
+      background: #001833;
+      color: white;
+      border-top: 4px solid #964387;
+      font-size: 0.9rem;
+    }
+
+    /* ANIMACIONES */
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* RESPONSIVE: reduce paddings on small screens */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.6rem; }
+      nav a { margin: 0 8px; font-size: 0.95rem; }
+      main { margin: 20px 12px; padding: 12px; }
+      .recurso-img { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Recursos</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="articulos.html">Artículos</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="acerca.html">Acerca de</a>
+  </nav>
+</header>
+
+<main>
+
+  <h2>🌐 Enlaces externos de interés</h2>
+  <p>Consulta organizaciones y fuentes confiables que profundizan en la importancia del sueño y la salud.</p>
+  <ul>
+    <li><a href="https://www.who.int/" target="_blank" rel="noopener">Organización Mundial de la Salud (OMS)</a></li>
+    <li><a href="https://www.sleepfoundation.org/" target="_blank" rel="noopener">Sleep Foundation</a></li>
+    <li><a href="https://www.cdc.gov/sleep" target="_blank" rel="noopener">CDC – Salud del sueño</a></li>
+    <li><a href="https://www.ninds.nih.gov" target="_blank" rel="noopener">Instituto Nacional de Trastornos Neurológicos</a></li>
+  </ul>
+
+  <h2>🎥 Video informativo</h2>
+  <p>Conoce técnicas prácticas para mejorar la calidad de tu descanso.</p>
+
+  <!-- VIDEO RESPONSIVO: reemplazado por tu video (Unnvetjp0lk) -->
+  <div class="video-contenedor">
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/Unnvetjp0lk" 
+        title="Video: Cómo resolver el insomnio y mejorar tu sueño" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <h2>📊 Cronología de uso digital</h2>
+  <img class="recurso-img" src="tu-imagen.jpg" alt="Cronología digital 1">
+  <div class="centro">
+    <a href="tu-imagen.jpg" download class="boton-descarga">📥 Descargar imagen</a>
+  </div>
+
+  <h2>📌 Mi huella digital</h2>
+  <img class="recurso-img" src="tu-imagen-2.jpg" alt="Cronología digital 2">
+  <div class="centro">
+    <a href="tu-imagen-2.jpg" download class="boton-descarga">📥 Descargar imagen</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 El poder del sueño | Autor: Equipo de Animación Digital</p>
+</footer>
+
+</body>
+</html>
