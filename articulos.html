@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artículos - El poder del sueño</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #f4f7ff;
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* HEADER IDÉNTICO */
+    header {
+      text-align: center;
+      padding: 35px 10px 25px;
+      background: linear-gradient(90deg, #001833, #0049a8);
+      color: white;
+      position: static;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.45);
+      border-bottom: 6px solid #b14fa1;
+      animation: moverHeader 6s infinite alternate ease-in-out;
+      backdrop-filter: blur(6px);
+    }
+
+    @keyframes moverHeader {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      text-shadow: 0px 3px 6px rgba(0,0,0,0.4);
+    }
+
+    nav {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #6ee7c8;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 10px 18px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.05);
+      transition: 0.35s;
+      box-shadow: 0 0 12px rgba(150, 67, 135, 0.3);
+    }
+
+    nav a:hover {
+      color: white;
+      background: rgba(255,255,255,0.18);
+      transform: scale(1.15) translateY(-3px);
+      box-shadow: 0px 5px 18px rgba(0,0,0,0.4);
+    }
+
+    /* CONTENIDO */
+    main {
+      width: 90%;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+
+    .contenedor-articulos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    article {
+      background: white;
+      border-radius: 14px;
+      padding: 22px;
+      border-left: 10px solid #4a90e2;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.18);
+      transition: 0.3s;
+      animation: fadeUp 0.6s ease;
+      text-align: justify;
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(25px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    article:hover {
+      transform: translateY(-7px);
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    article h2 {
+      margin-bottom: 10px;
+      color: #4a90e2;
+      font-size: 1.45rem;
+    }
+
+    article ul {
+      margin-top: 12px;
+    }
+
+    ul li {
+      margin-bottom: 5px;
+    }
+
+    /* TABLA */
+    table {
+      width: 75%;
+      margin: 50px auto;
+      border-collapse: collapse;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0px 6px 18px rgba(0,0,0,0.25);
+      animation: fadeUp 0.7s ease;
+    }
+
+    th {
+      background: linear-gradient(90deg, #4a90e2, #0078ff);
+      color: white;
+      padding: 14px;
+    }
+
+    td {
+      padding: 13px;
+      background: #fafafa;
+      text-align: center;
+    }
+
+    tr:nth-child(even) td {
+      background: #ead7ec;
+    }
+
+    /* PDF */
+    .pdf-contenedor {
+      width: 90%;
+      margin: 50px auto;
+      text-align: center;
+      animation: fadeUp 0.8s ease;
+    }
+
+    .pdf-contenedor iframe {
+      width: 100%;
+      height: 750px;
+      border-radius: 10px;
+      border: 3px solid #4a90e2;
+      box-shadow: 0px 6px 18px rgba(0,0,0,0.25);
+    }
+
+    .boton-descarga {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 14px 20px;
+      background: #964387;
+      color: white;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .boton-descarga:hover {
+      background: #702f63;
+      transform: scale(1.07);
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 18px;
+      background: #001833;
+      color: white;
+      border-top: 4px solid #964387;
+      margin-top: 60px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Artículos</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="acerca.html">Acerca de</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="contenedor-articulos">
+
+    <!-- ARTÍCULOS EXISTENTES + TEXTO JUSTIFICADO -->
+    <article>
+      <h2>🧠 Beneficios del sueño adecuado</h2>
+      <p>Un descanso adecuado permite que el cerebro procese información, repare tejidos, fortalezca conexiones neuronales y regule emociones. La calidad del sueño está directamente ligada al rendimiento académico, la creatividad y la estabilidad emocional.</p>
+      <ul>
+        <li>Mejor rendimiento académico</li>
+        <li>Reducción del estrés y la irritabilidad</li>
+        <li>Mayor energía durante el día</li>
+        <li>Mejor capacidad para resolver problemas</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>🌙 Consejos para dormir mejor</h2>
+      <p>Establecer una rutina antes de dormir, controlar la iluminación y evitar dispositivos electrónicos mejora la calidad del sueño. La higiene del sueño también refuerza el reloj biológico y ayuda a conciliar el sueño más rápido.</p>
+      <ul>
+        <li>Evitar pantallas 1 hora antes de dormir</li>
+        <li>Usar música relajante</li>
+        <li>No consumir bebidas con cafeína</li>
+        <li>Crear un ambiente tranquilo</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>📱 Tecnodependencia y el sueño</h2>
+      <p>La exposición prolongada a dispositivos móviles interfiere con la melatonina y altera los ciclos circadianos. Esto puede causar insomnio, falta de concentración, irritabilidad y disminución del rendimiento escolar.</p>
+      <ul>
+        <li>Mayor probabilidad de insomnio</li>
+        <li>Desregulación del ciclo sueño-vigilia</li>
+        <li>Impacto en emociones y atención</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>😴 Consecuencias de la falta de sueño</h2>
+      <p>No dormir lo suficiente afecta la memoria, reflejos, estado emocional y salud física. Las personas con sueño deficiente son más propensas a enfermedades, ansiedad y bajo rendimiento intelectual.</p>
+      <ul>
+        <li>Problemas de aprendizaje</li>
+        <li>Mayor riesgo de enfermedades</li>
+        <li>Irritabilidad y ansiedad</li>
+      </ul>
+    </article>
+
+    <!-- NUEVOS ARTÍCULOS -->
+    <article>
+      <h2>🌿 ¿Qué es la melatonina y cómo funciona?</h2>
+      <p>La melatonina es una hormona producida naturalmente por la glándula pineal que regula el ciclo sueño-vigilia. Su producción aumenta al caer la noche y disminuye con la luz del día. Es clave para generar sueño profundo y reparar tejidos.</p>
+      <ul>
+        <li>Regula el reloj biológico</li>
+        <li>Mejora la conciliación del sueño</li>
+        <li>Puede administrarse en suplementos bajo supervisión</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>🏃 Relación entre ejercicio y sueño</h2>
+      <p>La actividad física diaria promueve la producción de serotonina y reduce el cortisol, facilitando un sueño más profundo. Realizar ejercicio suave en la tarde puede mejorar significativamente el descanso nocturno.</p>
+      <ul>
+        <li>Reduce el estrés</li>
+        <li>Mejora la calidad del sueño</li>
+        <li>Favorece la circulación y la salud cardíaca</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>🔥 Técnicas para combatir el insomnio</h2>
+      <p>El insomnio puede mejorar aplicando métodos de relajación, respiración guiada y controlando estímulos externos. También es clave evitar el uso del teléfono en la cama y establecer rutinas nocturnas.</p>
+      <ul>
+        <li>Respiración 4-7-8</li>
+        <li>Meditación guiada</li>
+        <li>Cenar ligero</li>
+      </ul>
+    </article>
+
+  </div>
+
+  <h3 style="text-align:center; margin-top:45px; font-size:1.5rem;">⏱️ Horas de sueño recomendadas</h3>
+
+  <table>
+    <tr><th>Edad</th><th>Horas por noche</th></tr>
+    <tr><td>Niños (6–12 años)</td><td>9–12</td></tr>
+    <tr><td>Adolescentes</td><td>8–10</td></tr>
+    <tr><td>Adultos jóvenes</td><td>7–9</td></tr>
+    <tr><td>Adultos mayores</td><td>7–8</td></tr>
+  </table>
+
+  <div class="pdf-contenedor">
+    <h2>📘 Conclusión sobre el uso responsable de servicios digitales</h2>
+    <iframe src="CONCLUSION.pdf"></iframe>
+    <a href="CONCLUSION.pdf" download class="boton-descarga">📥 Descargar PDF</a>
+  </div>
+
+</main>
+<footer>
+  <p>&copy; 2025 El poder del sueño</p>
+</footer>
+
+</body>
+</html>

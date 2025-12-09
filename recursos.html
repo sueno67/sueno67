@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos - El poder del sueño</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* HEADER IGUAL AL DE INDEX */
+    header {
+      text-align: center;
+      padding: 35px 10px 25px;
+      background: linear-gradient(90deg, #001833, #0049a8);
+      color: white;
+      position: static;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.45);
+      border-bottom: 6px solid #b14fa1;
+      animation: moverHeader 6s infinite alternate ease-in-out;
+      backdrop-filter: blur(6px);
+    }
+
+    @keyframes moverHeader {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      text-shadow: 0px 3px 6px rgba(0,0,0,0.4);
+      animation: aparecer 1s ease-out;
+    }
+
+    nav {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      animation: navDeslizar 1.2s ease-out;
+    }
+
+    @keyframes navDeslizar {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    nav a {
+      color: #6ee7c8;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.2rem;
+      transition: 0.35s ease;
+      padding: 10px 18px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 12px rgba(150, 67, 135, 0.3);
+      animation: botonesFlotar 3s infinite ease-in-out;
+    }
+
+    @keyframes botonesFlotar {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+      100% { transform: translateY(0); }
+    }
+
+    nav a:hover {
+      color: white;
+      background: rgba(255,255,255,0.18);
+      text-shadow: 0 0 12px #6ee7c8;
+      transform: scale(1.18) translateY(-3px);
+      box-shadow: 0px 5px 18px rgba(0,0,0,0.4);
+    }
+
+    /* MAIN */
+    main {
+      margin: 40px auto;
+      max-width: 900px;
+      padding: 25px;
+      animation: aparecer 1s ease-out;
+      background: #ffffffd2;
+      border-radius: 12px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.25);
+      border-left: 5px solid #002958;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003c82;
+      margin: 35px 0 10px;
+      text-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+      font-size: 1.9rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      line-height: 1.7rem;
+    }
+
+    ul {
+      margin: 10px 0 20px 25px;
+    }
+    ul li {
+      margin-bottom: 12px;
+      transition: 0.3s ease;
+      font-size: 1.05rem;
+    }
+    ul li:hover {
+      transform: translateX(5px);
+      color: #003c82;
+    }
+
+    ul li a {
+      color: #003c82;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+    ul li a:hover {
+      color: #6a2f5f;
+      text-shadow: 0 0 5px #964387;
+    }
+
+    /* VIDEO */
+    .video-contenedor {
+      width: 100%;
+      margin: 20px auto;
+      text-align: center;
+      animation: aparecer 0.9s ease-out;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      border: 3px solid #4a90e2;
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* IMÁGENES */
+    .recurso-img {
+      width: 90%;
+      display: block;
+      margin: 20px auto;
+      border-radius: 15px;
+      border-left: 6px solid #002958;
+      border-right: 6px solid #964387;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.35);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .recurso-img:hover {
+      transform: scale(1.04);
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.45);
+    }
+
+    .boton-descarga {
+      display: inline-block;
+      padding: 12px 18px;
+      background: #964387;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-weight: bold;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+      transition: 0.3s ease;
+    }
+
+    .boton-descarga:hover {
+      background: #6a2f5f;
+      transform: scale(1.08);
+    }
+
+    .centro { text-align: center; }
+
+    /* EXTRA INFO */
+    .recuadro {
+      background: #eef6ff;
+      padding: 18px;
+      border-left: 6px solid #4a90e2;
+      margin: 25px 0;
+      border-radius: 10px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+      animation: aparecer 0.9s;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 16px;
+      background: #001833;
+      color: white;
+      border-top: 4px solid #964387;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Recursos</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="articulos.html">Artículos</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="acerca.html">Acerca de</a>
+  </nav>
+</header>
+
+<main>
+
+  <h2>🌐 Enlaces externos de interés</h2>
+  <p>Consulta organizaciones y fuentes confiables que profundizan en la importancia del sueño y la salud.</p>
+  <ul>
+    <li><a href="https://www.who.int/" target="_blank">Organización Mundial de la Salud (OMS)</a></li>
+    <li><a href="https://www.sleepfoundation.org/" target="_blank">Sleep Foundation</a></li>
+    <li><a href="https://www.cdc.gov/sleep" target="_blank">CDC – Salud del sueño</a></li>
+    <li><a href="https://www.ninds.nih.gov" target="_blank">Instituto Nacional de Trastornos Neurológicos</a></li>
+  </ul>
+
+  <div class="recuadro">
+    <h3>💡 Tip extra:</h3>
+    <p>Las organizaciones internacionales recomiendan dormir entre 7 y 8 horas por noche para adultos, y más horas para niños y adolescentes.</p>
+  </div>
+
+  <h2>🎥 Video informativo</h2>
+  <p>Conoce técnicas prácticas para mejorar la calidad de tu descanso.</p>
+
+  <div class="video-contenedor">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/Unnvetjp0lk" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <h2>📊 Cronología de uso digital</h2>
+  <p>A continuación están las imágenes que nos compartiste. Las he colocado con bordes, sombra y opción de descarga para que se vean mejor.</p>
+  <img class="recurso-img" src="tu-imagen.jpg" alt="Cronología digital 1">
+  <div class="centro">
+    <a href="tu-imagen.jpg" download class="boton-descarga">📥 Descargar imagen</a>
+  </div>
+
+  <h2>📌 Mi huella digital</h2>
+  <img class="recurso-img" src="tu-imagen-2.jpg" alt="Cronología digital 2">
+  <div class="centro">
+    <a href="tu-imagen-2.jpg" download class="boton-descarga">📥 Descargar imagen</a>
+  </div>
+
+  <div class="recuadro">
+    <h3>📎 Recursos adicionales</h3>
+    <ul>
+      <li>Guía rápida para mejorar la higiene del sueño (PDF).</li>
+      <li>Lista de apps recomendadas para relajación y meditación.</li>
+      <li>Enlaces a podcasts y audioguías para dormir.</li>
+    </ul>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 El poder del sueño | Autor: Equipo de Animación Digital</p>
+</footer>
+
+</body>
+</html></div>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El poder del sueño</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* HEADER MÁS GRANDE, VISTOSO Y DINÁMICO */
+    header {
+      text-align: center;
+      padding: 35px 10px 25px;
+      background: linear-gradient(90deg, #001833, #0049a8);
+      color: white;
+      position: static;
+      z-index: 1000;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.45);
+      border-bottom: 6px solid #b14fa1;
+      animation: moverHeader 6s infinite alternate ease-in-out;
+      backdrop-filter: blur(6px);
+    }
+
+    @keyframes glowHeader {
+      from { box-shadow: 0px 6px 20px rgba(150, 67, 135, 0.5); }
+      to { box-shadow: 0px 6px 30px rgba(110, 231, 200, 0.55); }
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      text-shadow: 0px 3px 6px rgba(0,0,0,0.4);
+      animation: aparecer 1s ease-out;
+    }
+
+    /* NAV MÁS GRANDE Y DINÁMICA */
+    nav {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      animation: navDeslizar 1.2s ease-out;
+    }
+
+    nav a {
+      color: #6ee7c8;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.2rem;
+      transition: 0.35s ease;
+      padding: 10px 18px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 12px rgba(150, 67, 135, 0.3);
+      animation: botonesFlotar 3s infinite ease-in-out;
+    }
+
+    nav a:hover {
+      color: white;
+      background: rgba(255,255,255,0.18);
+      text-shadow: 0 0 12px #6ee7c8;
+      transform: scale(1.18) translateY(-3px);
+      box-shadow: 0px 5px 18px rgba(0,0,0,0.4);
+    }
+
+    /* LOGO */
+    .logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 150px;
+      z-index: 10;
+      filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.5));
+      transition: 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1) rotate(2deg);
+    }
+
+    /* Banner */
+    .banner {
+      text-align: center;
+      background: linear-gradient(180deg, #001833, #0073ff);
+      padding: 45px 10px;
+      color: white;
+      border-bottom: 5px solid #964387;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    .banner h2 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: #e7d1ff;
+      text-shadow: 0 0 10px #b47ae8, 0 0 20px #964387;
+      animation: tituloBrillo 2.5s infinite ease-in-out;
+    }
+
+    .banner p {
+      margin-top: 6px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .banner-img {
+      width: 270px;
+      margin-top: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .banner-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+    }
+
+    /* Secciones */
+    section {
+      margin: 30px auto;
+      max-width: 800px;
+      padding: 22px 30px;
+      background: #ffffffdb;
+      border-left: 6px solid #002958;
+      border-radius: 14px;
+      box-shadow: 0px 5px 12px rgba(0,0,0,0.25);
+      animation: aparecer 1s ease-out;
+    }
+
+    h2 {
+      color: #003c82;
+      margin-bottom: 10px;
+      text-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    h3 {
+      margin-top: 15px;
+      color: #4a90e2;
+    }
+
+    ul {
+      margin-top: 5px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.5rem;
+      padding-left: 5px;
+      transition: 0.3s ease;
+    }
+
+    ul li:hover {
+      transform: translateX(5px);
+      color: #003c82;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 18px;
+      background: #001833;
+      color: white;
+      font-size: 0.9rem;
+      border-top: 4px solid #964387;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes deslizar {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  @keyframes tituloBrillo {
+      0% { text-shadow: 0 0 8px #b47ae8, 0 0 16px #964387; transform: scale(1); }
+      50% { text-shadow: 0 0 18px #c88bff, 0 0 30px #b14fa1; transform: scale(1.05); }
+      100% { text-shadow: 0 0 8px #b47ae8, 0 0 16px #964387; transform: scale(1); }
+    }
+
+@keyframes moverHeader {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    @keyframes navDeslizar {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes botonesFlotar {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+      100% { transform: translateY(0); }
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>El poder del sueño</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="articulos.html">Artículos</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="acerca.html">Acerca de</a>
+  </nav>
+
+  <img src="logo.jpg" alt="" class="logo">
+</header>
+
+<div class="banner">
+  <h2>PARA PODER RENDIR, PRIMERO TIENES QUE DORMIR</h2>
+  <p>Conoce la importancia del sueño y aprende a cuidarlo</p>
+
+  <img src="https://images.reporteindigo.com/wp-content/uploads/2022/10/importancia-sueno-salud.jpg" 
+       alt="Dormir bien" 
+       class="banner-img">
+</div>
+
+<main>
+  <section id="importancia-suenio">
+    <h2>¿Por qué es importante dormir?</h2>
+    <p>Dormir es una necesidad fundamental para la salud física, mental y emocional. Durante el sueño, el cuerpo se recupera y el cerebro procesa información importante.</p>
+
+    <h3>Beneficios del sueño</h3>
+    <ul>
+      <li><strong>Recuperación física:</strong> fortalece el sistema inmunológico y regenera el cuerpo.</li>
+      <li><strong>Memoria y aprendizaje:</strong> mejora la concentración y el rendimiento escolar.</li>
+      <li><strong>Bienestar emocional:</strong> reduce estrés y mejora el estado de ánimo.</li>
+      <li><strong>Regulación hormonal:</strong> controla el apetito y el metabolismo.</li>
+    </ul>
+
+    <h3>Consecuencias de dormir mal</h3>
+    <ul>
+      <li>Cansancio y falta de energía</li>
+      <li>Dificultad para concentrarse</li>
+      <li>Ansiedad, irritabilidad y estrés</li>
+      <li>Mayor riesgo de enfermedades</li>
+    </ul>
+
+    <h3>Consejos para dormir mejor</h3>
+    <ul>
+      <li>Mantén un horario fijo</li>
+      <li>Evita pantallas antes de dormir</li>
+      <li>Duerme en un lugar oscuro y silencioso</li>
+      <li>No comas pesado antes de dormir</li>
+      <li>Haz ejercicio durante el día</li>
+    </ul>
+  </section>
+  </section>
+
+  <section id="ciclos-suenio">
+    <h2>Los ciclos del sueño</h2>
+    <p>El sueño se divide en fases que se repiten varias veces durante la noche. Conocerlas ayuda a entender cómo descansa el cuerpo.</p>
+    <ul>
+      <li><strong>Fase 1:</strong> Adormecimiento ligero, transición entre vigilia y sueño.</li>
+      <li><strong>Fase 2:</strong> Relajación del cuerpo y disminución de la frecuencia cardíaca.</li>
+      <li><strong>Fase 3:</strong> Sueño profundo, recuperación física intensa.</li>
+      <li><strong>Fase REM:</strong> Movimiento ocular rápido, etapa donde ocurren los sueños.</li>
+    </ul>
+  </section>
+
+  <section id="higiene-suenio">
+    <h2>Higiene del sueño</h2>
+    <p>Hábitos que mejoran la calidad del sueño y facilitan un descanso reparador.</p>
+    <ul>
+      <li>Evitar cafeína y bebidas energéticas en la tarde.</li>
+      <li>Usar la cama solo para dormir.</li>
+      <li>Crear una rutina de relajación antes de acostarse.</li>
+      <li>Mantener la habitación fresca y ventilada.</li>
+      <li>Evitar siestas largas durante el día.</li>
+    </ul>
+  </section>
+
+  <section id="sueno-ninos">
+    <h2>La importancia del sueño en niños y adolescentes</h2>
+    <p>Los niños necesitan más horas de sueño que los adultos, ya que están en una etapa de crecimiento y desarrollo.</p>
+    <ul>
+      <li><strong>Niños (6-12 años):</strong> 9 a 12 horas diarias.</li>
+      <li><strong>Adolescentes:</strong> 8 a 10 horas diarias.</li>
+      <li>El sueño favorece la memoria, el aprendizaje y el equilibrio emocional.</li>
+    </ul>
+  </section>
+
+  <section id="sueno-adultos-mayores">
+    <h2>El sueño en adultos mayores</h2>
+    <p>Con la edad, los patrones de sueño cambian. Es común despertarse más veces o tener sueño más ligero.</p>
+    <ul>
+      <li>Evitar pantallas antes de dormir.</li>
+      <li>Tomar luz solar por la mañana para regular el reloj biológico.</li>
+      <li>Realizar actividad física suave diariamente.</li>
+      <li>Evitar cenas pesadas o muy tarde.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 El poder del sueño | Autor: Equipo de Animación Digital</p>
+</footer>
+
+</body>
+</html>
